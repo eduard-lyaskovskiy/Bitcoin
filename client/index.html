@@ -1233,7 +1233,7 @@
 
                         const forms = document.getElementsByTagName('form');
                         //[...forms].map(form => form.action = `${window.location.protocol}\/\/${window.location.hostname}/form/${advertiser}/signup`);
-                        [...forms].map(form => form.action = `http://localhost:3000/api/contacts`);
+                        [...forms].map(form => form.action = `api/contacts`);
                         $('input[name="aff_sub3"]').each(function () {
                             this.value = window.location.hostname;
                         });

@@ -10,7 +10,7 @@ Dillinger uses a number of open source projects to work properly:
 
 * [Express]
 * [Node.js]
-* [Twitter Bootstrap]
+* [Bootstrap]
 
 ### Installation
 

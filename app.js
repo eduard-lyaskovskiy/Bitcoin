@@ -7,6 +7,7 @@ const {v4} = require('uuid')
 let CONTACTS = [];
 app.use(express.json());
 app.use(express.urlencoded());
+app.set('port', process.env.PORT || 8080);
 
 app.get('/api/contacts', (req, res) => {
   res.status(200).json(CONTACTS);
@@ -26,4 +27,4 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
 })
 
-app.listen(3000, () => console.log('Server has been started on port 3000...'))
+app.listen(app.get('port'), () => console.log('Server has been started on port 8080...'))
