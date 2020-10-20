@@ -1,10 +1,12 @@
 const express = require('express');
 // const bodyParser = require('body-parser');
+const compression = require('compression');
 const path = require('path');
 const app = express();
 const {v4} = require('uuid')
 
 let CONTACTS = [];
+app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded());
 app.set('port', process.env.PORT || 8080);
