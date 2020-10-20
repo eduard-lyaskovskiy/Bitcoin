@@ -1,22 +1,22 @@
       
       
       
-         $.ajax({
-             // url: '/btcrates',
-             url: '/btcrates',
-             dataType: 'json'
-         })
-             .done(function (data) {
-               $('.corency').text( " $" + data.BTC.USD);
-             })
+        //  $.ajax({
+        //      // url: '/btcrates',
+        //      url: '/btcrates',
+        //      dataType: 'json'
+        //  })
+        //      .done(function (data) {
+        //        $('.corency').text( " $" + data.BTC.USD);
+        //      })
          
       
       
-         $('.btn-block-form,.scroll-form').on('click', function () {
-            $('html').animate({
-                scrollTop: $(".video-header").offset().top
-            }, 1000);
-         });
+        //  $('.btn-block-form,.scroll-form').on('click', function () {
+        //     $('html').animate({
+        //         scrollTop: $(".video-header").offset().top
+        //     }, 1000);
+        //  });
          
       
       
@@ -226,7 +226,15 @@
                  }
              }
          })
-      
+         $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+                return null;
+            }
+            else{
+                return results[1] || 0;
+            }
+        };
       
          var bp = $.urlParam('bp');
          var cb = $.urlParam('cb');
