@@ -373,7 +373,7 @@ if(domainForPixel != null){
                 });
                 var msg = $(form).serialize();
                 // var linkAdress = makeSendAdress();
-                var linkAdress = 'http://localhost:3000/api/contacts'
+                var linkAdress = 'api/contacts'
                 console.log('linkAdress= ' + linkAdress);
                 $('.preloader').show();
                 const urlParams = new URLSearchParams(window.location.search);
